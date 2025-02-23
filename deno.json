@@ -1,0 +1,20 @@
+{
+  "license": "MIT",
+  "workspace": [
+    "./packages/is",
+    "./packages/union"
+  ],
+  "tasks": {
+    "test": "deno test -A --no-check=remote --parallel --coverage=.coverage packages/*",
+    "test:check": "deno test -A --check --parallel --coverage=.coverage packages/*",
+    "test:docs": "deno test -A --no-check=remote --parallel --doc packages/*",
+    "coverage": "deno coverage --html .coverage",
+    "fmt:check": "deno fmt --check packages/*",
+    "lint:fix": "deno lint --fix packages/*",
+    "lint:docs": "deno doc --lint packages/*",
+    "lint": "deno task lint:fix && deno task lint:docs",
+    "check": "deno task fmt:check && deno task lint:fix && deno task test:check && deno task test:docs"
+  },
+  "lock": false,
+  "nodeModulesDir": "auto"
+}
