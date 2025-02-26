@@ -1,0 +1,18 @@
+{
+  "name": "@type/union",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts",
+    "./first": "./first.ts",
+    "./is": "./is.ts",
+    "./keys": "./keys.ts",
+    "./last": "./last.ts",
+    "./length": "./length.ts",
+    "./to-tuple": "./to-tuple.ts",
+    "./to-intersection": "./to-intersection.ts"
+  },
+  "publish": {
+    "include": ["*.ts", "*.md", "*.json", "LICENSE"],
+    "exclude": ["**/*.test.*"]
+  }
+}
